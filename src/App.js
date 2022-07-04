@@ -6,6 +6,7 @@ import{useState} from "react";
 import MoonCast from './components/mooncast/MoonCast';
 import Time from './components/Time/Time';
 
+
 function App() {
  
 const[place,setPlace]=useState("Sibiu");
@@ -21,7 +22,7 @@ const handleFetch=()=>{
       wind:response.current.wind_mph,
       pressure:response.current.pressure_in,
       icon:response.current.condition.icon,
-      
+      time:response.location.localtime,
       
         current:response.current.temp_c,
         high:response.forecast.forecastday[0].day.maxtemp_c,
@@ -38,19 +39,28 @@ const handleFetch=()=>{
   return (
     <div>
     <div className="container-search">
+
        <input type="text" value={place} onChange={(e)=>setPlace(e.target.value)}/>
       <button onClick={handleFetch}>search</button>
+      
       </div>
-   <div className='container'>
-   {placeInformation&& <CurrentWeather data={placeInformation}/>}
-   </div>
-   <div className='container-moon'>
-     {placeInformation&&<MoonCast set={placeInformation}/>}
-   </div>
-   <div className='container-time'>
-          <Time/>
+
+      <div className='container-time'>
+          <Time data={placeInformation}/>
 
    </div>
+   
+   <div className='container'>
+   {placeInformation&& <CurrentWeather data={placeInformation}/>}
+   <div className='container-moon'>
+   {placeInformation&&<MoonCast set={placeInformation}/>}
+   
+   
+   </div>
+   
+   </div>
+   
+   
    
     </div>
   );

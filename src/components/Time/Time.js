@@ -4,11 +4,11 @@ import "./timp.css";
 
 
 
-const time=()=>{
+const time=({data})=>{
 return(
 
 <div className="timp">
-    <h1>14:59</h1>
+    <h1>{data.time}</h1>
 </div>
 
 );
