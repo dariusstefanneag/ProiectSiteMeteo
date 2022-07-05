@@ -1,5 +1,5 @@
-.moon{
-width: 300px;
+.sun{
+    width: 300px;
     border-radius: 10px;
     box-shadow: 10px -2px 20px 2px rgb(0, 0, 0);
     color: white;
@@ -7,36 +7,26 @@ width: 300px;
     margin :20 px auto 0 auto;
     padding: 0 20px 20px 20px;
     text-align: center;
+    
    
 }
 
+.icon-sun{
+    width: 40%;
+    
+}
 
 .top{
     display: flex;
     text-align: center;
-    
     align-items: center;
 }
-
-.date{
+.sunrise{
     font-weight: 600;
-   font-size: 18px;
-   line-height: 1;
-   margin: 0;
-   letter-spacing: 1px; 
-}
-
-.phase{
-    font-weight: 400;
-    font-size: 14px;
+    font-size: 18px;
     line-height: 1;
     margin: 0;
-}
+    letter-spacing: 1px; 
 
-.icon-moon{
     
-    width: 40%;
-    height:auto;
-    padding-left: 90px;
-   
 }

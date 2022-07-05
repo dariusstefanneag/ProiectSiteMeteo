@@ -1,7 +1,10 @@
 .container{
-  max-width:350px;
-  margin:2px auto;
- 
+  display: grid;
+    margin: 50px;
+    align-items: center;
+    grid-template-columns: auto auto auto;
+    gap: 200px;
+    padding: 10px;
 }
 
 .container-search{
@@ -10,12 +13,7 @@
   
 }
 
-.container-moon{
-  max-width:350px;
-  margin:60px auto;
-  padding-left: 550px;
- 
-}
+
 
 .constainer-time{
  

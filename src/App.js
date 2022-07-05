@@ -4,7 +4,8 @@ import './App.css';
 import CurrentWeather from './components/current-weather/currentWeather';
 import{useState} from "react";
 import MoonCast from './components/mooncast/MoonCast';
-import Time from './components/Time/Time';
+
+import Sun from './components/SunRiseSunSet/Sun';
 
 
 function App() {
@@ -29,6 +30,8 @@ const handleFetch=()=>{
         low:response.forecast.forecastday[0].day.mintemp_c,
         date:response.forecast.forecastday[0].date,
         phase:response.forecast.forecastday[0].astro.moon_phase,
+        sunrise:response.forecast.forecastday[0].astro.sunrise,
+        sunset:response.forecast.forecastday[0].astro.sunset,
        
       condition:response.current.condition.text
     })
@@ -45,20 +48,16 @@ const handleFetch=()=>{
       
       </div>
 
-      <div className='container-time'>
-          <Time data={placeInformation}/>
-
-   </div>
+     
    
    <div className='container'>
+     <Sun data={placeInformation}/>
    {placeInformation&& <CurrentWeather data={placeInformation}/>}
-   <div className='container-moon'>
    {placeInformation&&<MoonCast set={placeInformation}/>}
    
-   
    </div>
    
-   </div>
+   
    
    
    

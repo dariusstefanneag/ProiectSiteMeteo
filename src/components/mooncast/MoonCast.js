@@ -10,9 +10,9 @@ return(
         <div>
           
         </div>
-        <br></br>
-        <p className="date">date: {set.date}</p>
-        <br></br>
+        <br/>
+        <p className="date">date: {set.time}</p>
+        <br/>
           <p className="phase">phase: {set.phase}</p>
          
         </div>
