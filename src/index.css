@@ -4,6 +4,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: rgb(141, 141, 141);
+  background: url("./assets/pozaa.jpg");
+  background-size: cover ;
+  background-repeat: no-repeat;
+  
+  
+  
 }
 
 code {
@@ -11,3 +17,4 @@ code {
     monospace;
     
 }
+

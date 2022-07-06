@@ -1,21 +1,30 @@
 .weather{
-    width: 300px;
-    border-radius: 6px;
-    box-shadow: 10px -2px 20px 2px rgb(0, 0, 0);
+    
+    
     color: white;
-    background-color: rgb(43, 183, 238);
-    margin :20 px auto 0 auto;
-    padding: 0 20px 20px 20px;
+   
+    margin :10px 0;
+    padding: 0 40px 40px 40px;
+    text-align: center;
     
-    
+}
+
+
+
+  
+.direction{
+    display: flex;
+    align-items: center;
+   
 }
 
 .iconita{
-    width: 30%;
+    width: 100%;
     height:auto;
+    
 }
 
-.top, .bottom{
+.top{
     display: flex;
     
     justify-content:space-between ;
@@ -26,15 +35,16 @@
 
 .location{
    font-weight: 600;
-   font-size: 18px;
+   font-size: 40px;
    line-height: 1;
    margin: 0;
    letter-spacing: 1px; 
+   display: flex;
 }
 
 .description{
     font-weight: 400;
-    font-size: 14px;
+    font-size: 30px;
     line-height: 1;
     margin: 0;
 }
@@ -50,7 +60,8 @@
 
 .details{
     width:100%;
-    padding-left: 20px;
+    padding-left: 15px;
+    font-size: 20px;
 }
 
 .paramete-row{
@@ -62,15 +73,11 @@
 .parameter-label{
     text-align: left;
     font-weight: 400;
-    font-size: 12px;
+    font-size: 20px;
+    padding-left: 20px;
 }
 
 
-.parameter-value{
-    text-align:right;
-    font-weight: 600;
-    font-size: 12px;
-}
 
 
 
