@@ -1,0 +1,47 @@
+.title{
+    font-size: 40px;
+    font-weight: 700;
+    color: white;
+    display: flex;
+    position: relative;
+    padding-left: 42%;
+}
+
+.position{
+    background-color: rgb(24,24,27,0.6);
+    border: 1px solid #eeee;
+    border-radius: 15px;
+    height: 60px;
+    margin: 5px;
+    display:flex;
+    align-items: center;
+    
+    font-size: 14px;
+    padding: 5px 20px;
+}
+
+icon-small{
+    width: 40px;
+    
+    
+    
+}
+.day{
+    color: white;
+    flex: 1 1;
+    font-weight: 600;
+    margin-left: 15px;
+}
+.type{
+    flex: 1 1;
+    margin-right: 15px;
+    text-align: right;
+    color: white;
+    font-weight: 600;
+}
+
+.h-l{
+color: white;
+font-weight: 600;
+}
+

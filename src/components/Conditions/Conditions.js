@@ -35,9 +35,9 @@ const Conditions = ({data}) => {
       </div>
 
       <div className="box"> 
-      <p  className="main">Ceva:</p>
-        <p className="ceva"> {Math.round(data.humidity)} </p>
-        <p className="ceva">  habar nu am  </p>
+      <p  className="main">Fells Like:</p>
+        <p className="ceva"> {Math.round(data.feelslike)} </p>
+        <p className="ceva">  °C  </p>
         </div>
 
       </div>
