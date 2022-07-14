@@ -1,4 +1,14 @@
+import { Switch } from "@mui/material";
+import { useState } from "react";
+
 const CurrenWeather = ({ weather }) => {
+  const [temp, setTemp]=useState(false);
+  const handleTempData=()=>{
+    temp ? setTemp(false): setTemp(true);
+
+  }
+
+  
   return (
     <div className="weather">
       <div className="top">
@@ -19,7 +29,7 @@ const CurrenWeather = ({ weather }) => {
           />
           <div>
             <p className="temperature">
-              {Math.round(weather.current.temp_c)}°C
+              {Math.round(temp ? (weather.current.temp_c):(weather.current.temp_f))}°
             </p>
           </div>
 
@@ -29,18 +39,19 @@ const CurrenWeather = ({ weather }) => {
                 <div>
                   <p className="parameter-label">
                     H:
-                    {Math.round(weather.forecast.forecastday[0].day.maxtemp_c)}
-                    °C
+                     {Math.round(temp ? (weather.forecast.forecastday[0].day.maxtemp_c):(weather.forecast.forecastday[0].day.maxtemp_f))}°
+                    
                   </p>
                   <p className="parameter-label">
                     L:
-                    {Math.round(weather.forecast.forecastday[0].day.mintemp_c)}
-                    °C
+                     {Math.round(temp ? (weather.forecast.forecastday[0].day.mintemp_c):(weather.forecast.forecastday[0].day.mintemp_f))}°
+                    
                   </p>
                 </div>
                 <div className="C-F">
-                  <p className="C">C </p>
-                  <p className="F">F</p>
+                 <Switch onClick={handleTempData}/>
+                 
+                 
                 </div>
               </div>
             </div>

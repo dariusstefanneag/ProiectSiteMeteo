@@ -51,19 +51,9 @@
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-}
-.C:hover {
-  transform: scale(1.4);
-  cursor: pointer;
-}
-.F:hover {
-  transform: scale(1.4);
-  cursor: pointer;
+  column-gap: 10px;
 }
 
-.C-F {
-  padding-left: 50px;
-}
 .flex {
   display: flex;
 }
@@ -100,6 +90,21 @@
   padding: 0 40px 40px 40px;
   text-align: center;
 }
+.C:hover {
+  transform: scale(1.4);
+  cursor: pointer;
+}
+.F:hover {
+  transform: scale(1.4);
+  cursor: pointer;
+}
+
+.C-F {
+  padding-left: 50px;
+}
+.flex {
+  display: flex;
+}
 .top {
   display: flex;
   text-align: center;
@@ -125,7 +130,7 @@
   margin: 0;
 }
 .iconita {
-  width: 100%;
+  width: 80%;
   height: auto;
 }
 .details {

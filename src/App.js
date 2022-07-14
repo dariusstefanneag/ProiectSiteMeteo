@@ -1,13 +1,14 @@
 import "./App.css";
 import SearchIcon from "@mui/icons-material/Search";
 import React, { useState, useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector,useDispatch } from "react-redux";
 import { WeatherFetch } from "./Info/WeatherFetch";
 import Condition from "./components/Conditions";
 import CurrenWeather from "./components/CurrentWeather";
 import MoonCast from "./components/MoonCast";
 import HourlyForecast from "./components/hourlyForecast";
 import ForecastDay from "./components/dailyForecast";
+
 
 function App() {
   const [place, setPlace] = useState("");
@@ -16,7 +17,7 @@ function App() {
   const getWeatherInfoData = (place) => dispatch(WeatherFetch(place));
 
   useEffect(() => {
-    getWeatherInfoData("sibiu");
+    getWeatherInfoData("sibiu" );
   }, []);
 
   const getWeatherInfo = (e) => {
@@ -33,6 +34,7 @@ function App() {
     return (
       <React.Fragment>
         <div>
+          
           <div className="container-search">
             <input
               type="text"
@@ -49,7 +51,7 @@ function App() {
 
           <div className="container">
             <Condition condition={weatherSelector.weatherInfo} />
-            <CurrenWeather weather={weatherSelector.weatherInfo} />
+            <CurrenWeather weather={weatherSelector.weatherInfo}  />
             <MoonCast phase={weatherSelector.weatherInfo} />
           </div>
           <div>
