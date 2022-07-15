@@ -1,38 +1,281 @@
-.App {
-  text-align: center;
+.container {
+  display: grid;
+  margin: 10px;
+  align-items: center;
+  grid-template-columns: auto auto auto;
+  gap: 150px;
+  padding: 30px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container-search {
+  max-width: 300px;
+  position: absolute;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-direction: row;
+  border-top: 1 px solid rgba(255, 255, 255, 0.5);
+  border-left: 1 px solid rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(1px);
+  overflow: hidden;
+  padding: 3px;
+}
+.container-search > input {
+  font-size: 20;
+  width: 200px;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  color: white;
+  background: transparent;
+}
+.container-search > input::placeholder {
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.search {
+  cursor: pointer;
+  transform: scale(1.2);
+  margin-right: 10px;
+}
+.search:hover {
+  transform: scale(1.4);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.constainer-time {
+  padding: 20px 70px;
+}
+
+/* CONDITIONS */
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 10px;
+}
+
+.flex {
+  display: flex;
+}
+.main {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 2;
+  margin: 0;
+  letter-spacing: 1px;
+}
+.second {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 2;
+  margin: 0;
+  letter-spacing: 1px;
+}
+.box {
+  width: 100px;
+  border-radius: 15px;
+  color: white;
+  background-color: rgb(24, 24, 27, 0.6);
+  margin: 10px 0;
+  padding: 0 20px 20px 20px;
+  text-align: center;
+  border: 1px solid #eeee;
+}
+
+/* CURRENT-WEATHER */
+
+.weather {
+  color: white;
+  margin: 10px 0;
+  padding: 0 40px 40px 40px;
+  text-align: center;
+}
+.C:hover {
+  transform: scale(1.4);
+  cursor: pointer;
+}
+.F:hover {
+  transform: scale(1.4);
+  cursor: pointer;
+}
+
+.C-F {
+  padding-left: 50px;
+}
+.flex {
+  display: flex;
+}
+.top {
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+.direction {
+  display: flex;
+  align-items: center;
+}
+.location {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 1;
+  margin: 0;
+  letter-spacing: 1px;
+  display: flex;
+}
+
+.description {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 1;
+  margin: 0;
+}
+.iconita {
+  width: 80%;
+  height: auto;
+}
+.details {
+  width: 100%;
+  padding-left: 15px;
+  font-size: 20px;
+}
+
+.paramete-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.parameter-label {
+  text-align: left;
+  font-weight: 400;
+  font-size: 20px;
+  padding-left: 20px;
+}
+.temperature {
+  font-weight: 600;
+  font-size: 70px;
+  width: auto;
+  letter-spacing: -5px;
+  margin: 10px 0;
+}
+
+/* MOONCAST */
+
+.moon {
+  width: 200px;
+  border-radius: 10px;
+
+  color: white;
+  background-color: rgb(24, 24, 27, 0.6);
+  margin: 10px 0;
+  padding: 0 20px 20px 20px;
+  text-align: center;
+  border: 1px solid #eeee;
+}
+
+.top {
+  display: flex;
+  text-align: center;
+
+  align-items: center;
+}
+
+.date {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.phase {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1;
+  margin: 0;
+}
+
+.icon-moon {
+  width: 40%;
+  height: auto;
+  padding-left: 65px;
+}
+
+/* HOURLY-FORECAST */
+
+.title1 {
+  font-size: 40px;
+  font-weight: 700;
+  color: white;
+  display: flex;
+  position: relative;
+  padding-left: 42%;
+}
+.all {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+
+  margin-right: 15px;
+  color: white;
+  font-weight: 600;
+  gap: 1px;
+}
+
+.items {
+  width: 100px;
+  border-radius: 15px;
+  color: white;
+  background-color: rgb(24, 24, 27, 0.6);
+  margin: 10px 0;
+  padding: 0 20px 20px 20px;
+  text-align: center;
+  border: 1px solid #eeee;
+  height: 150px;
+}
+
+/* DAILY-FORECAST */
+
+.title {
+  font-size: 40px;
+  font-weight: 700;
+  color: white;
+  display: flex;
+  position: relative;
+  padding-left: 43%;
+}
+
+.position {
+  background-color: rgb(24, 24, 27, 0.6);
+  border: 1px solid #eeee;
+  border-radius: 15px;
+  height: 40px;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+
+  font-size: 14px;
+  padding: 5px 20px;
+}
+
+.icon-small {
+  width: 40px;
+}
+.day {
+  color: white;
+  flex: 1 1;
+  font-weight: 600;
+  margin-left: 15px;
+}
+.type {
+  flex: 1 1;
+  margin-right: 15px;
+  text-align: right;
+  color: white;
+  font-weight: 600;
+}
+
+.h-l {
+  color: white;
+  font-weight: 600;
 }
