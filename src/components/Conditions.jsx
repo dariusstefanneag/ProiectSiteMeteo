@@ -33,19 +33,19 @@ const Condition = ({ condition }) => {
 
       <div className="box">
         <p className="main">Wind:</p>
-        <p className="ceva"> {Math.round(wind ?(condition.current.wind_mph):(condition.current.wind_kph))}</p>
+        <p className="ceva"> {Math.round(wind ?(condition.current.wind_mph):(condition.current.wind_kph))} {wind ?("Mph"):("Kph")}</p>
         <Switch onClick={handleWind}/>
       </div>
 
       <div className="box">
         <p className="main">Pressure:</p>
-        <p className="ceva"> {Math.round(pressure ?(condition.current.pressure_in):(condition.current.pressure_mb))} </p>
+        <p className="ceva"> {Math.round(pressure ?(condition.current.pressure_in):(condition.current.pressure_mb))} {pressure ?("In"):("Mb")} </p>
         <Switch onClick={handlePressure}/>
       </div>
 
       <div className="box">
         <p className="main">Precipitations:</p>
-        <p className="ceva"> {precip ?(condition.current.precip_mm):(condition.current.precip_in)} </p>
+        <p className="ceva"> {precip ?(condition.current.precip_mm):(condition.current.precip_in)} {precip ?("Mm"):("In")} </p>
         <Switch onClick={handlePrecip}/>
       </div>
 
@@ -57,7 +57,7 @@ const Condition = ({ condition }) => {
 
       <div className="box">
         <p className="main">Fells Like:</p>
-        <p className="ceva"> {Math.round(data ?(condition.current.feelslike_c):(condition.current.feelslike_f))}° </p>
+        <p className="ceva"> {Math.round(data ?(condition.current.feelslike_c):(condition.current.feelslike_f))}°{data ? ("C"):("F")} </p>
 
         <Switch onClick={handleData}/>
       </div>

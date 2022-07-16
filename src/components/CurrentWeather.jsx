@@ -29,7 +29,7 @@ const CurrenWeather = ({ weather }) => {
           />
           <div>
             <p className="temperature">
-              {Math.round(temp ? (weather.current.temp_c):(weather.current.temp_f))}°
+              {Math.round(temp ? (weather.current.temp_c):(weather.current.temp_f))}°{temp ? ("C"):("F")}
             </p>
           </div>
 
@@ -39,12 +39,12 @@ const CurrenWeather = ({ weather }) => {
                 <div>
                   <p className="parameter-label">
                     H:
-                     {Math.round(temp ? (weather.forecast.forecastday[0].day.maxtemp_c):(weather.forecast.forecastday[0].day.maxtemp_f))}°
+                     {Math.round(temp ? (weather.forecast.forecastday[0].day.maxtemp_c):(weather.forecast.forecastday[0].day.maxtemp_f))}°{temp ? ("C"):("F")}
                     
                   </p>
                   <p className="parameter-label">
                     L:
-                     {Math.round(temp ? (weather.forecast.forecastday[0].day.mintemp_c):(weather.forecast.forecastday[0].day.mintemp_f))}°
+                     {Math.round(temp ? (weather.forecast.forecastday[0].day.mintemp_c):(weather.forecast.forecastday[0].day.mintemp_f))}°{temp ? ("C"):("F")}
                     
                   </p>
                 </div>
