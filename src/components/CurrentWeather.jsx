@@ -2,7 +2,7 @@ import { Switch } from "@mui/material";
 import { useState } from "react";
 
 const CurrenWeather = ({ weather }) => {
-  const [temp, setTemp]=useState(false);
+  const [temp, setTemp]=useState(true);
   const handleTempData=()=>{
     temp ? setTemp(false): setTemp(true);
 

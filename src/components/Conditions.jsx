@@ -3,22 +3,22 @@ import { useState } from "react";
 
 const Condition = ({ condition }) => {
 
-  const [data, setData]=useState(false);
+  const [data, setData]=useState(true);
   const handleData=()=>{
     data ? setData(false): setData(true);
 
   }
-  const [wind, setWind]=useState(false);
+  const [wind, setWind]=useState(true);
   const handleWind=()=>{
     wind ? setWind(false): setWind(true);
 
   }
-  const [pressure, setPressure]=useState(false);
+  const [pressure, setPressure]=useState(true);
   const handlePressure=()=>{
     pressure ? setPressure(false): setPressure(true);
 
   }
-  const [precip, setPrecip]=useState(false);
+  const [precip, setPrecip]=useState(true);
   const handlePrecip=()=>{
     precip ? setPrecip(false): setPrecip(true);
 
